@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+<div class="page-header">
+	<h1>新分教师信息采集</h1>
+	<p>填报时间：2017年4月26日</p>
+	<p>填报要求</p>
+	<p>
+		<a class="btn btn-primary" href="{{url_for('main.add')}}" role="button">新建</a>
+		<a class="btn btn-default" href="{{url_for('main.change_request')}}" role="button">查看/修改</a>
+	</p>
+{% endblock %}

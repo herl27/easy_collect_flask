@@ -1,0 +1,12 @@
+venv/
+
+*.pyc
+__pycache__/
+
+*.db
+db/
+
+*.*~
+
+*.xls
+out/

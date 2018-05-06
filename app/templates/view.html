@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+<div class="page-header">
+	<h1>{{ teacher.name }}</h1>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">填报资料</h3>
+	</div>
+	<div class="panel-body">
+		<p>
+			<strong>性别：</strong>{{teacher.sex}}
+		</p>
+		<p>
+			<strong>出生日期：</strong>{{teacher.birthday.strftime('%Y年%m月%d日')}}
+		</p>
+		<p>
+			<strong>身份证号：</strong>{{teacher.id_card}}
+		</p>
+		<p>
+			<strong>民族：</strong>{{teacher.race}}
+		</p>
+		<p>
+		<strong>籍贯：</strong>{{teacher.origin}}
+		</p>
+		<p>
+			<strong>电话：</strong>{{teacher.tel}}
+		</p>
+		<p>
+			<strong>任教课程：</strong>{{teacher.course}}
+		</p>
+		<p>
+			<strong>班主任：</strong>
+			{% if teacher.is_header_teacher %}是{% else %}否{% endif %}
+		</p>
+		<p>
+			<strong>参加工作时间：</strong>{{teacher.working_date.strftime('%Y年%m月%d日')}}
+		</p>
+		<p>
+			<strong>填写时间：</strong>{{teacher.change_time.strftime('%Y年%m月%d日 %H:%M:%S')}}
+		</p>
+		<p>
+			<a class="btn btn-primary" href="{{url_for('main.change',id=teacher.id)}}" role="button">修改</a>
+			<a class="btn btn-default" href="{{url_for('main.index')}}" role="button">返回首页</a>
+		</p>
+	</div>
+</div>
+{% endblock %}
+

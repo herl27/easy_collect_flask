@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+<div class="page-header">
+	<h1>您遇到一个错误</h1>
+	<p>页面不存在</p>
+	<p>
+	<a class="btn btn-default" href="{{ url_for('main.index') }}" role="button">返回首页</a>
+	</p>
+{% endblock %}

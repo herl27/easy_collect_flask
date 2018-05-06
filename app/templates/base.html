@@ -1,0 +1,16 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}肥城三中2017级{% endblock %}
+
+{% block navbar %}
+
+{% endblock %}
+
+{% block content %}
+{{ utils.flashed_messages(dismissible=True) }}
+<div class="container">
+	{% block page_content %}
+	{% endblock %}
+</div>
+{% endblock %}
