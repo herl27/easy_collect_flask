@@ -18,7 +18,7 @@ class TeacherForm(FlaskForm):
     is_header_teacher = SelectField('班主任', coerce=int,
             choices=[(0, "否"), (1, "是")])
     working_date = DateField('工作日期', 
-            format='%Y-%m-%d', validators=[Required()])
+            format='%Y/%m/%d', validators=[Required()])
     submit = SubmitField('保存')
 
 class NewTeacherForm(TeacherForm):
